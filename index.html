@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuizMaster - Interactive Quiz Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-brain"></i><span>QuizMaster</span></div>
+    <div class="nav-links">
+      <a href="#" data-target="home"><i class="fas fa-home"></i> Home</a>
+      <a href="#" data-target="quiz-setup"><i class="fas fa-play"></i> Start Quiz</a>
+      <a href="#" data-target="scores"><i class="fas fa-trophy"></i> Scores</a>
+      <a href="#" data-target="about"><i class="fas fa-info-circle"></i> About</a>
+    </div>
+    <div class="hamburger"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <div class="container">
+    <div id="home" class="page active">
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Challenge Your Knowledge, Master the Quiz!</h1>
+          <p>Test your skills with our interactive quiz platform. Choose from various categories and difficulty levels, track your progress, and climb the leaderboard!</p>
+          <a href="#" class="btn" data-target="quiz-setup">Start Quiz Now</a>
+        </div>
+      </section>
+    </div>
+
+    <div id="quiz-setup" class="page">
+      <section class="form-container">
+        <h2 class="form-title">Enter Quiz Details</h2>
+        <div class="form-group">
+          <label for="playerName">Player Name</label>
+          <input type="text" id="playerName" class="form-control" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="quizCategory">Quiz Category</label>
+          <select id="quizCategory" class="form-control">
+            <option value="">Select a category</option>
+            <option value="General Knowledge">General Knowledge</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="Technology">Technology</option>
+            <option value="Movies">Movies</option>
+            <option value="Geopolitics">Geopolitics</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="difficulty">Difficulty Level</label>
+          <select id="difficulty" class="form-control">
+            <option value="">Select difficulty</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </div>
+        <button id="startBtn" class="btn" disabled>Start Quiz</button>
+      </section>
+    </div>
+
+    <div id="quiz-engine" class="page"></div>
+    <div id="score-summary" class="page"></div>
+    <div id="scores" class="page"></div>
+    <div id="about" class="page"></div>
+  </div>
+
+  <footer>
+    <p>© 2023 QuizMaster | Interactive Quiz Platform</p>
+    <p>Built with <i class="fas fa-heart" style="color: var(--danger);"></i> for knowledge seekers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
