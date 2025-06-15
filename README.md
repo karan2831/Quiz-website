@@ -19,4 +19,7 @@ Welcome to **QuizMaster**, a modern and responsive quiz web application built us
 - Font Awesome Icons
 
 ## 📂 Folder Structure
-
+Quiz-Website
+├── index.html
+├── style.css
+└── script.js
