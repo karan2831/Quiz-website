@@ -1,78 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>QuizMaster - Interactive Quiz Platform</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Interactive Quiz Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo"><i class="fas fa-brain"></i><span>QuizMaster</span></div>
-    <div class="nav-links">
-      <a href="#" data-target="home"><i class="fas fa-home"></i> Home</a>
-      <a href="#" data-target="quiz-setup"><i class="fas fa-play"></i> Start Quiz</a>
-      <a href="#" data-target="scores"><i class="fas fa-trophy"></i> Scores</a>
-      <a href="#" data-target="about"><i class="fas fa-info-circle"></i> About</a>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>QuizMaster</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" data-target="home"><i class="fas fa-home"></i> Home</a>
+            <a href="#" data-target="quiz-setup"><i class="fas fa-play"></i> Start Quiz</a>
+            <a href="#" data-target="scores"><i class="fas fa-trophy"></i> Scores</a>
+            <a href="#" data-target="about"><i class="fas fa-info-circle"></i> About</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    
+    <div class="container">
+       
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Challenge Your Knowledge, Master the Quiz!</h1>
+                    <p>Test your skills with our interactive quiz platform. Choose from various categories and difficulty levels, track your progress, and climb the leaderboard!</p>
+                    <a href="#" class="btn" data-target="quiz-setup">Start Quiz Now</a>
+                </div>
+            </section>
+        </div>
+
+       
+        <div id="quiz-setup" class="page">
+            <section class="form-container">
+                <h2 class="form-title">Enter Quiz Details</h2>
+                <div class="form-group">
+                    <label for="playerName">Player Name</label>
+                    <input type="text" id="playerName" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="quizCategory">Quiz Category</label>
+                    <select id="quizCategory" class="form-control">
+                        <option value="">Select a category</option>
+                        <option value="General Knowledge">General Knowledge</option>
+                        <option value="Science">Science</option>
+                        <option value="History">History</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Movies">Movies</option>
+                        <option value="Geopolitics">Geopolitics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="difficulty">Difficulty Level</label>
+                    <select id="difficulty" class="form-control">
+                        <option value="">Select difficulty</option>
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+                <button id="startBtn" class="btn" disabled>Start Quiz</button>
+            </section>
+        </div>
+
+       
+        <div id="quiz-engine" class="page">
+            <section class="quiz-container">
+                <div class="quiz-header">
+                    <div class="player-info">Player: <strong id="player-name-display">John Doe</strong> | <span id="category-display">Science</span> | <span id="difficulty-display">Medium</span></div>
+                    <div class="timer">
+                        <i class="fas fa-clock"></i>
+                        <span id="time-left">15</span>s
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" id="progress-bar"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span>Question <span id="current-q">1</span> of <span id="total-q">10</span></span>
+                        <span>Score: <span id="current-score">0</span></span>
+                    </div>
+                </div>
+                
+                <div class="question-container">
+                    <div class="question-text" id="question-text">Which planet is known as the Red Planet?</div>
+                    <div class="options-grid" id="options-grid">
+                        <div class="option" data-option="0">Venus</div>
+                        <div class="option" data-option="1">Mars</div>
+                        <div class="option" data-option="2">Jupiter</div>
+                        <div class="option" data-option="3">Saturn</div>
+                    </div>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button id="prev-btn" class="btn btn-outline">Previous</button>
+                    <button id="next-btn" class="btn">Next Question</button>
+                </div>
+            </section>
+        </div>
+
+       
+        <div id="score-summary" class="page">
+            <section class="score-container">
+                <h2 class="score-title">Quiz Completed!</h2>
+                <div class="score-value" id="final-score">85%</div>
+                <div class="motivation champion" id="motivation-message">Quiz Champion! 🏆</div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Correct Answers</div>
+                        <div class="stat-value" id="correct-answers">8/10</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Total Time</div>
+                        <div class="stat-value" id="total-time">2:15</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Fastest Answer</div>
+                        <div class="stat-value" id="fastest-answer">3s</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Category</div>
+                        <div class="stat-value" id="summary-category">Science</div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="play-again-btn" class="btn">Play Again</button>
+                    <button id="leaderboard-btn" class="btn btn-outline">View Leaderboard</button>
+                </div>
+            </section>
+        </div>
+
+       
+        <div id="scores" class="page">
+            <section class="leaderboard-container">
+                <div class="leaderboard-header">
+                    <h2>Quiz Leaderboard</h2>
+                    <div class="sort-buttons">
+                        <button class="sort-btn active" data-sort="score">Score</button>
+                        <button class="sort-btn" data-sort="time">Time</button>
+                        <button class="sort-btn" data-sort="date">Date</button>
+                    </div>
+                </div>
+                
+                <table id="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Score</th>
+                            <th>Time</th>
+                            <th>Date</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <section class="about-container">
+                <div class="about-header">
+                    <h2>About QuizMaster</h2>
+                    <p>The ultimate quiz experience that challenges your knowledge</p>
+                </div>
+                
+                <p>QuizMaster is an interactive quiz platform designed to test your knowledge across various categories. Built with modern web technologies, this application features a responsive design that works seamlessly on both desktop and mobile devices.</p>
+                
+                <h3>What I Learned Building This Project:</h3>
+                <ul>
+                    <li>Designing responsive layouts with CSS Grid and Flexbox</li>
+                    <li>Creating interactive UI elements with JavaScript</li>
+                    <li>Implementing timer functionality for quizzes</li>
+                    <li>Building a progress tracking system</li>
+                    <li>Designing for optimal user experience</li>
+                    <li>Creating engaging animations with pure CSS</li>
+                </ul>
+                
+                <h3>Tech Stack Used:</h3>
+                <div class="tech-stack">
+                    <div class="tech-card">HTML5</div>
+                    <div class="tech-card">CSS3</div>
+                    <div class="tech-card">JavaScript</div>
+                    <div class="tech-card">SVG Graphics</div>
+                    <div class="tech-card">LocalStorage</div>
+                </div>
+                
+                <div class="meme-container">
+                    <img src="https://i.imgflip.com/7vj5w4.jpg" alt="Quiz Meme" class="meme">
+                    <p>When you realize you've been guessing most answers 😅</p>
+                </div>
+            </section>
+        </div>
     </div>
-    <div class="hamburger"><i class="fas fa-bars"></i></div>
-  </nav>
 
-  <div class="container">
-    <div id="home" class="page active">
-      <section class="hero">
-        <div class="hero-content">
-          <h1>Challenge Your Knowledge, Master the Quiz!</h1>
-          <p>Test your skills with our interactive quiz platform. Choose from various categories and difficulty levels, track your progress, and climb the leaderboard!</p>
-          <a href="#" class="btn" data-target="quiz-setup">Start Quiz Now</a>
-        </div>
-      </section>
-    </div>
+   
+    <footer>
+        <p>© 2023 QuizMaster | Interactive Quiz Platform</p>
+        <p>Built with <i class="fas fa-heart"></i> for knowledge seekers</p>
+    </footer>
 
-    <div id="quiz-setup" class="page">
-      <section class="form-container">
-        <h2 class="form-title">Enter Quiz Details</h2>
-        <div class="form-group">
-          <label for="playerName">Player Name</label>
-          <input type="text" id="playerName" class="form-control" placeholder="Enter your name">
-        </div>
-        <div class="form-group">
-          <label for="quizCategory">Quiz Category</label>
-          <select id="quizCategory" class="form-control">
-            <option value="">Select a category</option>
-            <option value="General Knowledge">General Knowledge</option>
-            <option value="Science">Science</option>
-            <option value="History">History</option>
-            <option value="Technology">Technology</option>
-            <option value="Movies">Movies</option>
-            <option value="Geopolitics">Geopolitics</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="difficulty">Difficulty Level</label>
-          <select id="difficulty" class="form-control">
-            <option value="">Select difficulty</option>
-            <option value="Easy">Easy</option>
-            <option value="Medium">Medium</option>
-            <option value="Hard">Hard</option>
-          </select>
-        </div>
-        <button id="startBtn" class="btn" disabled>Start Quiz</button>
-      </section>
-    </div>
-
-    <div id="quiz-engine" class="page"></div>
-    <div id="score-summary" class="page"></div>
-    <div id="scores" class="page"></div>
-    <div id="about" class="page"></div>
-  </div>
-
-  <footer>
-    <p>© 2023 QuizMaster | Interactive Quiz Platform</p>
-    <p>Built with <i class="fas fa-heart" style="color: var(--danger);"></i> for knowledge seekers</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
