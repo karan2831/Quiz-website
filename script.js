@@ -88,26 +88,66 @@ const quizData = {
         { question: "Which of these is not a database?", options: ["MySQL", "MongoDB", "React", "PostgreSQL"], answer: 2 }
     ],
     "Movies": [
-        { question: "Who directed the movie 'Inception'?", options: ["Steven Spielberg", "Christopher Nolan", "James Cameron", "Quentin Tarantino"], answer: 1 },
-        { question: "Which actor played Tony Stark in the Marvel movies?", options: ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"], answer: 2 },
-        { question: "Which movie won the first Academy Award for Best Picture?", options: ["Gone with the Wind", "Wings", "Casablanca", "The Jazz Singer"], answer: 1 },
-        { question: "What is the highest-grossing film of all time?", options: ["Avatar", "Avengers: Endgame", "Titanic", "Star Wars: The Force Awakens"], answer: 1 },
-        { question: "Which actress has won the most Academy Awards?", options: ["Meryl Streep", "Katharine Hepburn", "Cate Blanchett", "Frances McDormand"], answer: 1 },
-        { question: "What was the first feature-length animated movie?", options: ["Snow White and the Seven Dwarfs", "Cinderella", "Pinocchio", "Bambi"], answer: 0 },
-        { question: "Which movie features the quote 'Here's looking at you, kid'?", options: ["Gone with the Wind", "Casablanca", "The Godfather", "Citizen Kane"], answer: 1 },
-        { question: "Who played Jack in Titanic?", options: ["Brad Pitt", "Tom Cruise", "Leonardo DiCaprio", "Johnny Depp"], answer: 2 },
-        { question: "Which film series has the most sequels?", options: ["James Bond", "Fast & Furious", "Godzilla", "Star Wars"], answer: 2 },
-        { question: "What was the first Disney animated feature film?", options: ["Cinderella", "Snow White and the Seven Dwarfs", "Fantasia", "Bambi"], answer: 1 },
-        { question: "Who directed 'The Shawshank Redemption'?", options: ["Steven Spielberg", "Martin Scorsese", "Frank Darabont", "Quentin Tarantino"], answer: 2 },
-        { question: "Which movie won the Oscar for Best Picture in 2020?", options: ["Parasite", "1917", "Joker", "Once Upon a Time in Hollywood"], answer: 0 },
-        { question: "Who played the Joker in 'The Dark Knight'?", options: ["Jack Nicholson", "Jared Leto", "Heath Ledger", "Joaquin Phoenix"], answer: 2 },
-        { question: "Which of these is not a Quentin Tarantino film?", options: ["Pulp Fiction", "Inglourious Basterds", "Fight Club", "Django Unchained"], answer: 2 },
-        { question: "What is the highest-grossing R-rated movie of all time?", options: ["Deadpool", "Joker", "The Matrix", "Logan"], answer: 1 },
-        { question: "Which actress has been nominated for the most Oscars?", options: ["Meryl Streep", "Katharine Hepburn", "Cate Blanchett", "Judi Dench"], answer: 0 },
-        { question: "Who directed 'Avatar'?", options: ["Steven Spielberg", "James Cameron", "Peter Jackson", "Ridley Scott"], answer: 1 },
-        { question: "Which movie features the character Hannibal Lecter?", options: ["Se7en", "The Silence of the Lambs", "Psycho", "American Psycho"], answer: 1 },
-        { question: "What was the first movie in the Marvel Cinematic Universe?", options: ["Iron Man", "The Incredible Hulk", "Thor", "Captain America"], answer: 0 },
-        { question: "Who played Wolverine in the X-Men films?", options: ["Ryan Reynolds", "Hugh Jackman", "Chris Evans", "Chris Hemsworth"], answer: 1 }
+        {
+            question: "Which actor played the lead role in the movie 'Dangal'?",options: ["Aamir Khan", "Salman Khan", "Shah Rukh Khan", "Akshay Kumar"], answer: 0 },
+        {
+            question: "Which of these movies is NOT directed by Sanjay Leela Bhansali?", options: ["Devdas", "Padmaavat", "Bajirao Mastani", "Kabhi Khushi Kabhie Gham"], answer: 3  },
+        {
+            question: "Who composed the music for the movie 'Rockstar'?",options: ["A.R. Rahman", "Pritam", "Vishal-Shekhar", "Shankar-Ehsaan-Loy"],answer: 0},
+        {
+            question: "Which actress made her debut in the movie 'Student of the Year'?", options: ["Alia Bhatt", "Shraddha Kapoor", "Parineeti Chopra", "Kriti Sanon"], answer: 0},
+        {
+            question: "Which movie features the song 'Chaiyya Chaiyya'?", options: ["Dil Se", "Dilwale Dulhania Le Jayenge", "Kuch Kuch Hota Hai", "Kabhi Khushi Kabhie Gham"],answer: 0},
+        {
+            question: "Who directed the movie 'Lagaan'?",options: ["Ashutosh Gowariker", "Rajkumar Hirani", "Karan Johar", "Rakesh Roshan"],answer: 0},
+        {
+            question: "Which of these movies won the Oscar for Best Original Song?",options: ["Lagaan", "Slumdog Millionaire", "Jodhaa Akbar", "Gully Boy"],answer: 1},
+        {
+            question: "Who played the character 'Mogambo' in the movie 'Mr. India'?",options: ["Amrish Puri", "Anupam Kher", "Paresh Rawal", "Naseeruddin Shah"],answer: 0 },
+        {
+            question: "Which movie features the dialogue 'Mere paas maa hai'?",options: ["Deewar", "Sholay", "Zanjeer", "Don"],answer: 0},
+        {
+            question: "Who is known as the 'Tragedy King' of Bollywood?",options: ["Raj Kapoor", "Dilip Kumar", "Dev Anand", "Rajesh Khanna"],answer: 0},
+        {
+            question: "Which actress has won the most Filmfare Awards?",options: ["Kajol", "Madhuri Dixit", "Vidya Balan", "Nutan"],answer: 3},
+        {
+            question: "Which movie was India's first 3D film?",options: ["Ra.One", "Chhota Chetan", "Haunted", "Krrish 3"],answer: 1},
+        {
+            question: "Who directed the movie '3 Idiots'?",options: ["Rajkumar Hirani", "Siddharth Anand", "Rohit Shetty", "Kabir Khan"],answer: 1},
+        {
+            question: "Which actor has won the most Filmfare Awards for Best Actor?",options: ["Shah Rukh Khan", "Amitabh Bachchan", "Dilip Kumar", "Aamir Khan"],answer: 2},
+        {
+            question: "Which movie marked the debut of Ranbir Kapoor?",options: ["Wake Up Sid", "Bachna Ae Haseeno", "Saawariya", "Ajab Prem Ki Ghazab Kahani"],answer: 2 },
+        {
+            question: "Who is known as the 'First Superstar' of Bollywood?",options: ["Rajesh Khanna", "Amitabh Bachchan", "Dharmendra", "Raj Kapoor"],answer: 0},
+        {
+            question: "Which of these movies is based on the life of Phogat sisters?",options: ["Dangal", "Sultan", "Mary Kom", "Bhaag Milkha Bhaag"],answer: 0},
+        {
+            question: "Who composed the music for 'Dilwale Dulhania Le Jayenge'?",options: ["A.R. Rahman", "Anu Malik", "Jatin-Lalit", "Vishal-Shekhar"],answer: 2},
+        {
+            question: "Which movie features the character 'Gabbar Singh'?",options: ["Sholay", "Deewar", "Zanjeer", "Don"],answer: 0},
+        {
+            question: "Who played the lead role in 'Black'?",options: ["Amitabh Bachchan", "Shah Rukh Khan", "Rishi Kapoor", "Anil Kapoor"],answer: 0 },
+        {
+            question: "Which movie won the first Filmfare Best Picture award?",options: ["Do Bigha Zamin", "Mother India", "Madhumati", "Naya Daur"],answer: 0},
+        {
+            question: "Who directed the movie 'Queen'?",options: ["Zoya Akhtar", "Vikas Bahl", "Anurag Kashyap", "Imtiaz Ali"],answer: 1},
+        {
+            question: "Which of these is NOT a Shah Rukh Khan movie?",options: ["Darr", "Baazigar", "Anjaam", "Vijaypath"],answer: 3},
+        {
+            question: "Who played the character 'Chandramukhi' in Devdas?",options: ["Madhuri Dixit", "Aishwarya Rai", "Kajol", "Rani Mukerji"],answer: 0},
+        {
+            question: "Which movie is known for the song 'Mera Joota Hai Japani'?",options: ["Shree 420", "Awara", "Jagte Raho", "Boot Polish"],answer: 0},
+        {
+            question: "Who is the director of 'Gangs of Wasseypur'?",options: ["Anurag Kashyap", "Vishal Bhardwaj", "Tigmanshu Dhulia", "Shoojit Sircar"],answer: 0},
+        {
+            question: "Which actress won the National Award for her role in 'Piku'?",options: ["Deepika Padukone", "Kangana Ranaut", "Priyanka Chopra", "Vidya Balan"],answer: 0},
+        {
+            question: "Which movie features the song 'Yeh Dosti Hum Nahi Todenge'?",options: ["Sholay", "Zanjeer", "Deewar", "Andaz Apna Apna"],answer: 0},
+        {
+            question: "Who played the lead role in the original 'Don' movie?",options: ["Amitabh Bachchan", "Shah Rukh Khan", "Dharmendra", "Vinod Khanna"],answer: 0},
+        {
+            question: "Which of these movies was produced by Yash Raj Films?",options: ["Dil Chahta Hai", "Lagaan", "Kal Ho Naa Ho", "Dilwale Dulhania Le Jayenge"],answer: 3}
     ],
     "Geopolitics": [
         { question: "Which country is not a permanent member of the UN Security Council?", options: ["United States", "China", "India", "France"], answer: 2 },
