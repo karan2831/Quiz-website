@@ -22,4 +22,4 @@ Welcome to **QuizMaster**, a modern and responsive quiz web application built us
 Quiz-Website
 ├── index.html
 ├── style.css
-└── script.js
+└── script.js# Quiz_website
