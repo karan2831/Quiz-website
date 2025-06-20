@@ -23,3 +23,4 @@ Quiz-Website
 ├── index.html
 ├── style.css
 └── script.js# Quiz_website
+# Quiz_website
